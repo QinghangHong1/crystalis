@@ -1,1 +1,1 @@
-web: mvn exec:java
+web: java -jar target/java-getting-started-1.0.0.jar
