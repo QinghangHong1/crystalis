@@ -4,12 +4,12 @@ package com.example;
 // import org.json.simple.parser.*; //for JSON parsing
 import java.io.*;
 // import java.util.*;
-import java.util.*;
-import java.util.stream.Collectors;
+// import java.util.*;
+// import java.util.stream.Collectors;
 
-import javax.mail.SendFailedException;
+// import javax.mail.SendFailedException;
 import javax.servlet.ServletException;
-import javax.servlet.ServletInputStream;
+// import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
