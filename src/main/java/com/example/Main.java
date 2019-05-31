@@ -45,19 +45,6 @@ import org.springframework.core.env.Environment;
 public class Main {
 
   public static void main(String[] args) {
-    // final Properties properties = new Properties();
-    // try {
-    //   properties.load(new FileInputStream("../resources/application.properties"));
-    //   System.out.println(properties.getProperty("server.port"));
-    // } catch (FileNotFoundException e1) {
-    //   // TODO Auto-generated catch block
-    //   e1.printStackTrace();
-    // } catch (IOException e1) {
-    //   // TODO Auto-generated catch block
-    //   e1.printStackTrace();
-    // }
-    
-    
       int port = Integer.parseInt (System.getenv("PORT"));
       for(int i = 0; i < 10; i++){  
       System.out.println(port);

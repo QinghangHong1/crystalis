@@ -22,7 +22,10 @@ public class UpdateInfo extends HttpServlet {
         String message = null;
         try {
             System.out.println("Connect to updateInfo");
-            Connection myConn = DriverManager.getConnection("jdbc:mysql://forest1.ccryyxtawuoq.us-west-1.rds.amazonaws.com/innodb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "admin", "cs48rubber");
+            String dbUrl = System.getenv("DB_URL");
+            String dbUser = System.getenv("DB_USER");
+            String dbPass = System.getenv("DB_PASSWORD");
+            Connection myConn = DriverManager.getConnection(dbUrl, dbUser, dbPass);
             String userName = null;
             // String userEmail = null;
             int money = 0;
