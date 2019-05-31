@@ -16,6 +16,14 @@
 
 package com.example;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+
 // import com.zaxxer.hikari.HikariConfig;
 // import com.zaxxer.hikari.HikariDataSource;
 // import org.springframework.beans.factory.annotation.Autowired;
@@ -35,9 +43,26 @@ package com.example;
 // import java.util.Map;
 
 public class Main {
- 
+
   public static void main(String[] args) {
-          final Jetty jetty = new Jetty(8080);
+    // final Properties properties = new Properties();
+    // try {
+    //   properties.load(new FileInputStream("../resources/application.properties"));
+    //   System.out.println(properties.getProperty("server.port"));
+    // } catch (FileNotFoundException e1) {
+    //   // TODO Auto-generated catch block
+    //   e1.printStackTrace();
+    // } catch (IOException e1) {
+    //   // TODO Auto-generated catch block
+    //   e1.printStackTrace();
+    // }
+    
+    
+      int port = Integer.parseInt (System.getenv("PORT"));
+      for(int i = 0; i < 10; i++){  
+      System.out.println(port);
+      }
+          final Jetty jetty = new Jetty(port);
           try{ 
               jetty.start();
               Thread.sleep(500);
