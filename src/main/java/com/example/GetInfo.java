@@ -19,10 +19,7 @@ public class GetInfo extends HttpServlet {
                                             throws ServletException, IOException{
         try{
             System.out.println("Connect to getInfo");
-            String dbUrl = System.getenv("DB_URL");
-            String dbUser = System.getenv("DB_USER");
-            String dbPass = System.getenv("DB_PASSWORD");
-            Connection myConn = DriverManager.getConnection(dbUrl, dbUser, dbPass);
+            Connection myConn = DriverManager.getConnection("jdbc:mysql://forest1.ccryyxtawuoq.us-west-1.rds.amazonaws.com/innodb?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC", "admin", "cs48rubber");
             String userName = null;
             String userPassword = null;
             JsonObject result = null;
